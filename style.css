@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Adrija</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffcc00, #ff6699, #ff99cc);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        #messageBox {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+        #checkBtn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background: #ffcc00;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #birthdayMessage, #loveNote {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+            display: none;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter the secret message to reveal the magic words!</h2>
+    <input type="text" id="messageBox" placeholder="Enter message here">
+    <button id="checkBtn" onclick="checkMessage()">Submit</button>
+    <div id="birthdayMessage">🎉 Happy 16th Birthday Adrija! 🎂🎈</div>
+    <div id="loveNote">❤️ I love you with all my heart ❤️<br>
+        You are the most special person in my life, and every moment with you is a treasure. Your laughter is my favorite melody, and your presence fills my world with joy. Through ups and downs, my love for you grows stronger every day. You are my greatest gift, my inspiration, and my happiness. No words can fully express how much I cherish you. Every heartbeat of mine beats for you, and I promise to stand by your side forever. You are my dream come true, and I am grateful for every single day I get to enjoy with you. ❤️
+    </div>
+
+    <script>
+        function checkMessage() {
+            var input = document.getElementById("messageBox").value;
+            if (input === "My Martian Monkey") {
+                document.getElementById("birthdayMessage").style.display = "block";
+                document.getElementById("loveNote").style.display = "block";
+            } else {
+                alert("Wrong message! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
